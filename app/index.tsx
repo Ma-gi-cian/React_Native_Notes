@@ -1,19 +1,19 @@
-import { Stack, Link } from 'expo-router';
+import { Stack , Link } from 'expo-router';
+import {SafeAreaView} from 'react-native-safe-area-context'
+import { useEffect } from 'react';
+import { LogBox, View, Text } from 'react-native';
+import { notes } from '~/components/data';
 
-import { Button } from '~/components/Button';
-import { Container } from '~/components/Container';
-import { ScreenContent } from '~/components/ScreenContent';
 
 export default function Home() {
   return (
     <>
-      <Stack.Screen options={{ title: 'Home' }} />
-      <Container>
-        <ScreenContent path="app/index.tsx" title="Home" />
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <Button title="Show Details" />
-        </Link>
-      </Container>
+      <Stack.Screen options={{title : "Live Location of Aditya Jha",  headerShown: false}} />
+      <SafeAreaView className = "">
+        <View className = "text-center bg-black mt-2 mx-4">
+          
+        </View>
+      </SafeAreaView>
     </>
   );
 }
